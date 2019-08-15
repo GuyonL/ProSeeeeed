@@ -8,6 +8,8 @@ public class Shooting : MonoBehaviour
     private Vector3 firePoint;
     public GameObject seed;
     public GameObject player;
+    private AudioSource audioSource;
+
     [SerializeField] private float force;
     [SerializeField] private float offset; 
 
@@ -41,5 +43,7 @@ public class Shooting : MonoBehaviour
         Vector3 startPosition = transform.position + Vector3.Normalize(firePoint - transform.position) * offset;
         GameObject seedInstance = Instantiate(seed, startPosition, transform.rotation);
         seedInstance.GetComponent<Rigidbody>().AddForce((firePoint - transform.position).normalized * force);
+
+
     }
 }
