@@ -12,6 +12,8 @@ public class CameraController : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         offset = transform.position - player.transform.position;
+        //Vector3 currentOffset = transform.position - player.transform.position;
+        //offset = Vector3.one * Mathf.Min(currentOffset.magnitude, 15.0f);
     }
 
     // Update is called once per frame
@@ -25,6 +27,6 @@ public class CameraController : MonoBehaviour
     {
         // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
         transform.position = player.transform.position + offset;
-        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 3.0f, 6.0f), transform.position.z);
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, transform.position.y - 5.0f, 6.0f), transform.position.z);
     }
 }

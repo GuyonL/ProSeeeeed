@@ -37,7 +37,7 @@ public class CharacterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(inventory);
     }
 
     void FixedUpdate()
@@ -100,7 +100,6 @@ public class CharacterScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
         if (other.gameObject.CompareTag("PickupSeed"))
         {
             if (inventory < 5)

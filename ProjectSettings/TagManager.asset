@@ -8,6 +8,7 @@ TagManager:
   - Tree
   - Seed
   - PickupSeed
+  - WOD
   layers:
   - Default
   - TransparentFX

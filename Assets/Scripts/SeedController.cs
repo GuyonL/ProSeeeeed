@@ -22,7 +22,7 @@ public class SeedController : MonoBehaviour
     {
         if (hit.gameObject.tag == "Ground")
         {
-            Vector3 treePosition = new Vector3(transform.position.x, 0.0f, 0.0f);
+            Vector3 treePosition = new Vector3(transform.position.x, hit.gameObject.GetComponent<Renderer>().bounds.max.y, 0.0f);
 
             Object.Destroy(this.gameObject);
 
