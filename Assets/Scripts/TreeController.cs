@@ -12,7 +12,7 @@ public class TreeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHeight = 1.0f;
+        maxHeight = 2.0f;
         growthRate = 2.0f;
         growthTime = 4.0f;
 
@@ -27,8 +27,10 @@ public class TreeController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 oldScale = this.gameObject.transform.localScale;
-        //Vector3 newScale = new Vector3(0.5f, oldScale * 2, )
-        this.gameObject.transform.localScale = Vector3.Lerp(oldScale, oldScale * growthRate, growthTime * Time.deltaTime);
+        if (this.gameObject.transform.lossyScale.y < maxHeight) {
+            Vector3 oldScale = this.gameObject.transform.localScale;
+            this.gameObject.transform.localScale = Vector3.Lerp(oldScale, oldScale * growthRate, growthTime * Time.deltaTime);
+        }
     }
+    
 }
