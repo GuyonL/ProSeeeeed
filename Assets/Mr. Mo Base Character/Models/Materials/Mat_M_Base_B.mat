@@ -40,11 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-<<<<<<< HEAD
-        m_Texture: {fileID: 2800000, guid: 5cdd535950c29ae4d8b3bb1bd516e9db, type: 3}
-=======
         m_Texture: {fileID: 2800000, guid: 0e14f8df6a9e3cd48843ec6d5e6b678b, type: 3}
->>>>>>> TreeScripts
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
