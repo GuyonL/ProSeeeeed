@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <<<<<<< Updated upstream
 Thanks for purchasing Mr. Mo Police and Thief asset pack.
 ----------
@@ -25,6 +27,7 @@ Leave us an email at omabuarts@gmail.com
 Follow us on:
 Facebook: https://www.facebook.com/Polydactyl-440193949513560
 =======
+>>>>>>> TreeScripts
 Thanks for purchasing Mr. Mo Police and Thief asset pack.
 ----------
 
@@ -50,5 +53,8 @@ Leave us an email at omabuarts@gmail.com
 
 Follow us on:
 Facebook: https://www.facebook.com/Polydactyl-440193949513560
+<<<<<<< HEAD
+=======
 >>>>>>> Stashed changes
+>>>>>>> TreeScripts
 Sketchfab: https://sketchfab.com/omabuartsSketchfab
