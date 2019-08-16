@@ -9,6 +9,10 @@ TagManager:
   - Seed
   - PickupSeed
   - WOD
+  - FinishMenu
+  - Water
+  - Checkpoint
+  - StartBtn
   layers:
   - Default
   - TransparentFX

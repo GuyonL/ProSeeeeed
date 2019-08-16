@@ -14,7 +14,7 @@ public class TreeController : MonoBehaviour
     {
         maxHeight = 2.0f;
         growthRate = 2.0f;
-        growthTime = 4.0f;
+        growthTime = 5.0f;
 
         this.gameObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
     }

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterScript : MonoBehaviour
 {
@@ -18,20 +20,22 @@ public class CharacterScript : MonoBehaviour
     private bool isGrounded;
     private bool stoppedJumping;
 
-
     private Vector3 moveDirection = Vector3.zero;
+    private Vector3 respawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         inventory = 5;
         jumpTimeCounter = 5.0f;
+        respawnPoint = new Vector3(-490f, -1.8f, 0f);
 
         isGrounded = true;
         stoppedJumping = true;
 
         characterController = GetComponent<CharacterController>();
         rigidBody = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
@@ -96,6 +100,10 @@ public class CharacterScript : MonoBehaviour
         {
             isGrounded = true;
         }
+        else if (collision.gameObject.tag == "Water")
+        {
+            respawn();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -111,6 +119,18 @@ public class CharacterScript : MonoBehaviour
         else if (other.gameObject.CompareTag("Tree") && transform.position.y > other.gameObject.transform.position.y)
         {
             isGrounded = true;
+        }
+
+        // Finish
+        if (other.gameObject.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene(3);
+        }
+
+        // Checkpoints
+        if (other.gameObject.tag == "Checkpoint")
+        {
+            respawnPoint = other.gameObject.GetComponent<CheckpointController>().getRespawnPoint();
         }
     }
 
@@ -130,5 +150,15 @@ public class CharacterScript : MonoBehaviour
     public int getInventory()
     {
         return inventory;
+    }
+
+    public void setCurrentCheckpoint(Vector3 position)
+    {
+        respawnPoint = position;
+    }
+
+    public void respawn()
+    {
+        transform.position = respawnPoint;
     }
 }

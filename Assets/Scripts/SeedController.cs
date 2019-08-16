@@ -6,17 +6,11 @@ public class SeedController : MonoBehaviour
 {
     public GameObject tree;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	// Start is called before the first frame update
+	void Start()
+	{
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	}
 
     void OnCollisionEnter(Collision hit)
     {
@@ -32,6 +26,6 @@ public class SeedController : MonoBehaviour
 
     private void FixedUpdate()
     {
-       
-    }
+		this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, 0.0f);
+	}
 }
