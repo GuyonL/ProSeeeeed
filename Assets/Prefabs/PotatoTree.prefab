@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2760587546529787509}
   - component: {fileID: 3172463753512195226}
   - component: {fileID: 7524735503203685804}
+  - component: {fileID: 4775556619778480317}
   m_Layer: 0
   m_Name: PotatoTree
   m_TagString: Tree
@@ -119,3 +120,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.3818045, y: 4.301361, z: 7.659645}
   m_Center: {x: -6.3785334, y: 15.565231, z: -0.18368436}
+--- !u!114 &4775556619778480317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9033052429151715866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d524c999ac9404199dbc272647ac1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHeight: 0
+  growthRate: 0
+  growthTime: 0

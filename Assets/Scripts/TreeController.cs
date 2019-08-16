@@ -12,11 +12,11 @@ public class TreeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHeight = 2.0f;
+        maxHeight = 0.325f;
         growthRate = 2.0f;
-        growthTime = 5.0f;
+        growthTime = 1.5f;
 
-        this.gameObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        this.gameObject.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
     }
 
     // Update is called once per frame
