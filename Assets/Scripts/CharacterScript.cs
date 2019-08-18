@@ -73,9 +73,11 @@ public class CharacterScript : MonoBehaviour
         {
             if (isGrounded)
             {
+                GetComponent<AudioSource>().Play();
                 rigidBody.velocity = new Vector3(rigidBody.velocity.x, jumpSpeed, 0f);
                 isGrounded = false;
                 stoppedJumping = false;
+                
             }
             else if (!isGrounded && !stoppedJumping)
             {
@@ -124,6 +126,7 @@ public class CharacterScript : MonoBehaviour
         // Finish
         if (other.gameObject.CompareTag("Finish"))
         {
+            other.gameObject.GetComponent<AudioSource>().Play();
             SceneManager.LoadScene(3);
         }
 
